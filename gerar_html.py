@@ -25,7 +25,7 @@ try:
             if os.path.isfile(arquivo):
                 if arquivo[-4:] == ".jpg" or arquivo[-4:] == ".png":
                     img_count += 1
-                    pagina.write(f"<h1><a href={sys.argv[1]}/{arquivo}>Imagem {img_count}</a></h1>")
+                    pagina.write(f"""<h1><a href="{sys.argv[1]}/{arquivo}">Imagem {img_count}</a></h1>""")
         pagina.write("</body></html>")
 
 except FileNotFoundError:
